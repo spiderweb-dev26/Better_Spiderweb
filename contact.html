@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
 <link rel="icon" type="image/jpeg" href="Logo.jpg">
-<link rel="apple-touch-icon" href="Logo.jpg">
-<title>Contact - SpiderWeb</title>
+<link rel="apple-touch-icon" href="Logo.jpg"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Why SpiderWeb</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -115,34 +115,20 @@ footer{background:#040206;border-top:1px solid var(--border);padding:3.5rem 5% 1
 }
 </style>
 <style>
-.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;margin-top:3rem;}
-.contact-left h2{margin-bottom:.75rem;}
-.contact-left p{color:var(--silver);font-size:.88rem;line-height:1.8;margin:1rem 0 2rem;}
-.contact-detail{display:flex;align-items:center;gap:.75rem;margin-bottom:.9rem;font-size:.85rem;color:var(--silver);}
-.contact-detail .ico{color:var(--red);font-size:1rem;width:22px;flex-shrink:0;}
-.contact-detail a{color:var(--silver);transition:color .2s;}
-.contact-detail a:hover{color:var(--red);}
-.contact-form{display:flex;flex-direction:column;gap:.9rem;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
-.form-group label{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);margin-bottom:.4rem;font-weight:600;}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(20,16,26,.9);border:1px solid var(--border);color:var(--light);padding:.68rem .9rem;border-radius:4px;font-family:'Inter',sans-serif;font-size:.85rem;transition:border-color .2s,box-shadow .2s;resize:vertical;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:rgba(220,20,60,.5);box-shadow:0 0 0 3px rgba(220,20,60,.08);}
-.form-group select option{background:#14101a;}
-.form-group textarea{min-height:120px;}
-.send-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:.25rem;}
-.send-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--silver);font-weight:600;}
-.send-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.68rem 1.5rem;border-radius:3px;font-size:.85rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;}
-.send-gmail{background:var(--red);color:#fff;}
-.send-gmail:hover{background:#b00030;transform:translateY(-1px);box-shadow:0 4px 18px rgba(220,20,60,.4);}
-.send-sms{background:transparent;color:var(--light);border:1px solid rgba(220,20,60,.4);}
-.send-sms:hover{background:rgba(220,20,60,.09);border-color:var(--red);color:var(--red);}
-#form-error{display:none;color:#f87171;font-size:.82rem;margin-top:.5rem;padding:.65rem .9rem;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);border-radius:3px;}
-.contact-trust{margin-top:2.5rem;padding:1.25rem 1.5rem;background:rgba(139,0,0,.08);border:1px solid rgba(220,20,60,.15);border-radius:5px;}
-.contact-trust h4{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.5rem;}
-.trust-items{display:flex;flex-direction:column;gap:.4rem;}
-.trust-item{font-size:.78rem;color:var(--silver);display:flex;align-items:center;gap:.5rem;}
-.trust-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0;}
-@media(max-width:900px){.contact-layout{grid-template-columns:1fr;gap:2.5rem;}.form-row{grid-template-columns:1fr;}}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3rem;}
+.process-step{padding:2rem;border-left:1px solid var(--border);position:relative;overflow:hidden;}
+.process-step::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.process-step:hover::after{transform:scaleX(1);}
+.process-step:first-child{border-left:none;}
+.step-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:rgba(220,20,60,.1);line-height:1;margin-bottom:.75rem;}
+.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--white);}
+.process-step p{font-size:.82rem;color:var(--silver);line-height:1.65;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+.stat-box{background:var(--card);padding:2.5rem;text-align:center;transition:background .3s;}
+.stat-box:hover{background:rgba(139,0,0,.1);}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--red);line-height:1;}
+.stat-lbl{font-size:.72rem;color:var(--silver);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;}
+@media(max-width:900px){.process-steps{grid-template-columns:1fr 1fr;}.process-step:nth-child(odd){border-left:none;}.process-step{border-top:1px solid var(--border);}.stat-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -195,50 +181,43 @@ footer{background:#040206;border-top:1px solid var(--border);padding:3.5rem 5% 1
 </svg></div>
   <div class="page-banner-glow"></div>
   <div class="page-banner-inner reveal">
-    <div class="section-label">Let's Talk</div>
-    <h1>Get In <span class="hl">Touch</span></h1>
-    <p>We'd love to hear about your project. Fill in the form and we'll get back to you within 24 hours.</p>
+    <div class="section-label">Our Difference</div>
+    <h1>Why <span class="hl">SpiderWeb?</span></h1>
+    <p>We are a boutique agency. We value our clients and our commitment to quality means we deliver results that actually make sense for your business.</p>
   </div>
 </div>
+<div class="marquee-wrap"><div class="marquee-track">
+<span class="mq-item">Next.js <b>&#10022;</b></span><span class="mq-item">React <b>&#10022;</b></span><span class="mq-item">Webflow <b>&#10022;</b></span><span class="mq-item">Shopify <b>&#10022;</b></span><span class="mq-item">Tailwind CSS <b>&#10022;</b></span><span class="mq-item">Figma <b>&#10022;</b></span><span class="mq-item">TypeScript <b>&#10022;</b></span><span class="mq-item">WordPress <b>&#10022;</b></span><span class="mq-item">Node.js <b>&#10022;</b></span><span class="mq-item">SEO <b>&#10022;</b></span>
+<span class="mq-item">Next.js <b>&#10022;</b></span><span class="mq-item">React <b>&#10022;</b></span><span class="mq-item">Webflow <b>&#10022;</b></span><span class="mq-item">Shopify <b>&#10022;</b></span><span class="mq-item">Tailwind CSS <b>&#10022;</b></span><span class="mq-item">Figma <b>&#10022;</b></span><span class="mq-item">TypeScript <b>&#10022;</b></span><span class="mq-item">WordPress <b>&#10022;</b></span><span class="mq-item">Node.js <b>&#10022;</b></span><span class="mq-item">SEO <b>&#10022;</b></span>
+</div></div>
 <section class="section">
   <div class="section-inner">
-    <div class="contact-layout">
-      <div class="contact-left reveal left">
-        <div class="section-label">Contact Info</div>
-        <h2>Let's Build Your<br>Digital Presence</h2>
-        <p>We make sure your business has what it needs. We love what we do. We are willing to work with you and create something beautiful and worthwhile for you and your clients.</p>
-        <div class="contact-detail"><span class="ico">&#128205;</span> Addis Ababa, Ethiopia</div>
-        <div class="contact-detail"><span class="ico">&#9993;</span> <a href="mailto:admin@spiderweb.lol">admin@spiderweb.lol</a></div>
-        <div class="contact-detail"><span class="ico">&#128222;</span> <a href="tel:+251969064030">+251 969 064 030</a></div>
-        <div class="contact-trust">
-          <h4>Why reach out?</h4>
-          <div class="trust-items">
-            <div class="trust-item">Free project consultation - no obligation</div>
-            <div class="trust-item">Response within 24 hours, usually faster</div>
-            <div class="trust-item">Clear quote with no hidden fees</div>
-            <div class="trust-item">Work with clients globally</div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal right">
-        <form class="contact-form" id="contactForm" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group"><label>Your Name</label><input type="text" id="f-name" placeholder="John Doe" required></div>
-            <div class="form-group"><label>Service Needed</label><select id="f-service"><option value="">Select a service...</option><option>Starter Web Development</option><option>Premium Web Development</option><option>Corporate Web Development</option><option>Domain Registration</option><option>E-Commerce</option><option>Other</option></select></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>Email Address</label><input type="email" id="f-email" placeholder="you@example.com" required></div>
-            <div class="form-group"><label>Phone (optional)</label><input type="tel" id="f-phone" placeholder="+251 ..."></div>
-          </div>
-          <div class="form-group"><label>Tell Us About Your Business</label><textarea id="f-message" placeholder="Describe your project, goals, and timeline..."></textarea></div>
-          <div class="send-row">
-            <span class="send-label">Send via</span>
-            <button type="button" class="send-btn send-gmail" onclick="sendVia('gmail')"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Gmail</button>
-            <button type="button" class="send-btn send-sms" onclick="sendVia('sms')"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H6l-2 2V4h16v10z"/></svg> Text / SMS</button>
-          </div>
-          <div id="form-error"></div>
-        </form>
-      </div>
+    <div class="grid-4">
+      <div class="card reveal" data-delay="0"><div class="card-icon">&#127919;</div><h3>Built for the Goal</h3><p>Every design decision is tied to your business objective - leads, sales, or brand awareness. We don't guess.</p></div>
+      <div class="card reveal" data-delay="80"><div class="card-icon">&#9889;</div><h3>Fast Delivery</h3><p>We move quickly without cutting corners. Most starter sites are live within 7 days of final approval.</p></div>
+      <div class="card reveal" data-delay="160"><div class="card-icon">&#128274;</div><h3>Secure Every Step</h3><p>SSL, security hardening, and WCAG accessibility built in - not bolted on as an afterthought.</p></div>
+      <div class="card reveal" data-delay="240"><div class="card-icon">&#128172;</div><h3>Always Support</h3><p>Real humans, real answers. We stay available post-launch with ongoing maintenance plans for every package.</p></div>
+      <div class="card reveal" data-delay="0"><div class="card-icon">&#129504;</div><h3>Strategy First</h3><p>We don't design before we understand your audience. Discovery is baked into every project we take on.</p></div>
+      <div class="card reveal" data-delay="80"><div class="card-icon">&#127758;</div><h3>Local Expertise</h3><p>Based in Addis Ababa. We understand the Ethiopian market and serve global clients with the same care.</p></div>
+      <div class="card reveal" data-delay="160"><div class="card-icon">&#128208;</div><h3>No Templates</h3><p>Everything is custom-built from scratch. Your site won't look like anyone else's - because it genuinely isn't.</p></div>
+      <div class="card reveal" data-delay="240"><div class="card-icon">&#128260;</div><h3>Iterative Process</h3><p>We build in feedback rounds so the final product reflects your vision precisely - not our interpretation of it.</p></div>
+    </div>
+
+    <div style="margin-top:5rem;">
+      <div class="section-label reveal">How We Work</div>
+      <h2 class="reveal">From Idea to Launch<br>in Four Moves</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal" data-delay="0"><div class="step-num">01</div><h3>Discovery</h3><p>We dig into your goals, audience, and competitors. No pixel is drawn until we understand what winning looks like for you.</p></div>
+      <div class="process-step reveal" data-delay="100"><div class="step-num">02</div><h3>Design</h3><p>High-fidelity Figma mockups - not wireframes. You see the real thing before a single line of code is written.</p></div>
+      <div class="process-step reveal" data-delay="200"><div class="step-num">03</div><h3>Build</h3><p>Clean, maintainable code using exactly the right tools for each project. No template shortcuts, ever.</p></div>
+      <div class="process-step reveal" data-delay="300"><div class="step-num">04</div><h3>Launch &amp; Beyond</h3><p>Deployment, domain setup, and performance tuning. Post-launch support available on every package.</p></div>
+    </div>
+
+    <div class="stat-row" style="margin-top:4rem;">
+      <div class="stat-box reveal"><div class="stat-num">84+</div><div class="stat-lbl">Sites Shipped</div></div>
+      <div class="stat-box reveal"><div class="stat-num">100%</div><div class="stat-lbl">Client Retention</div></div>
+      <div class="stat-box reveal"><div class="stat-num">6yr</div><div class="stat-lbl">In Business</div></div>
     </div>
   </div>
 </section>
@@ -303,59 +282,6 @@ var revObs=new IntersectionObserver(function(entries){
 },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){revObs.observe(el);});
 </script>
-<script>
-function sendVia(method){
-  var name=document.getElementById('f-name').value.trim();
-  var service=document.getElementById('f-service').value;
-  var email=document.getElementById('f-email').value.trim();
-  var phone=document.getElementById('f-phone').value.trim();
-  var message=document.getElementById('f-message').value.trim();
-  var errEl=document.getElementById('form-error');
-  if(!name){showErr('Please enter your name.');return;}
-  if(!email){showErr('Please enter your email address.');return;}
-  errEl.style.display='none';
-  var lines=[
-    'Hi SpiderWeb Team,',
-    '',
-    'I would like to inquire about your web development services.',
-    '',
-    '--- MY DETAILS ---',
-    'Name:    '+name,
-    'Email:   '+email,
-    phone?'Phone:   '+phone:'',
-    service?'Service: '+service:'Service: Not specified',
-    '',
-    '--- MY PROJECT ---',
-    message||'(No additional details provided yet.)',
-    '',
-    'Please get back to me at your earliest convenience.',
-    '',
-    'Kind regards,',
-    name
-  ];
-  var body=lines.filter(function(l){return l!==undefined;}).join('\n');
-  var subject='Website Inquiry'+(service?' - '+service:'')+' | '+name;
-  if(method==='gmail'){
-    var url='https://mail.google.com/mail/?view=cm'
-      +'&to='+encodeURIComponent('admin@spiderweb.lol')
-      +'&su='+encodeURIComponent(subject)
-      +'&body='+encodeURIComponent(body);
-    window.open(url,'_blank');
-  } else {
-    var sms='Hi SpiderWeb! My name is '+name
-      +(service?', I am interested in '+service:'')
-      +'. Email: '+email
-      +(phone?', Phone: '+phone:'')
-      +(message?'. '+message:'')
-      +'. Please get back to me. Thanks!';
-    window.location.href='sms:+251969064030?body='+encodeURIComponent(sms);
-  }
-}
-function showErr(msg){
-  var el=document.getElementById('form-error');
-  el.textContent=msg;
-  el.style.display='block';
-}
-</script>
+
 </body>
 </html>
